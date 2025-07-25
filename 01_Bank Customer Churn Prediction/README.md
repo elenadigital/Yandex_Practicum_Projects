@@ -75,4 +75,4 @@ Exited — факт ухода клиента
 
 **Используемые библиотеки
 
-Pandas, Matplotlib, Seaborn, Sklearn, 
+Pandas, Matplotlib, Seaborn, Sklearn 
