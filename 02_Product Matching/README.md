@@ -1,13 +1,13 @@
 # Matching. Поиск наиболее похожих товаров
 
-## Задача проекта:
+## Задача проекта
 
 Разработать алгоритм, который для всех товаров из validation.csv предложит 5 вариантов наиболее похожих товаров из base.csv.   
   
 Оценка качества алгоритма производится по метрике **accuracy@5**.   
 
 
-## Описание данных:
+## Описание данных
 
 * **base.csv** - анонимизированный набор товаров. Каждый товар представлен как уникальный id (0-base, 1-base, 2-base) и вектор признаков размерностью 72.
 
@@ -23,7 +23,7 @@
 * **KNN**
 * **Faiss**
 
-## План исследования:
+## План исследования
 
 1. Загрузка библиотек и датасетов
 2. Изучение данных в датасетах
@@ -33,20 +33,20 @@
 6. Решение задачи с помощью Faiss:
 * Baseline Faiss FlatL2  и Faiss IVFFlat c метрикой Euclidean (без регулязации числовых признаков);
 * Регулязация признаков с помощью RobustScaler():
-  1. Faiss FlatL2 (Euclidean)
-  2. Faiss IVFFlat FlatL2 (Euclidean)
-  3. Faiss IVFFlat FlatL2 + nprobe (Euclidean)
-  4. Faiss FlatIP (Cosine)
-  5. Faiss Flat (Manhattan)
-  6. Faiss IVFFlat FlatIP (Cosine)
+      * Faiss FlatL2 (Euclidean)
+      * Faiss IVFFlat FlatL2 (Euclidean)
+      * Faiss IVFFlat FlatL2 + nprobe (Euclidean)
+      * Faiss FlatIP (Cosine)
+      * Faiss Flat (Manhattan)
+      * Faiss IVFFlat FlatIP (Cosine)
 
 * Регулязация признаков с помощьюStandardScaler():
-  1. Faiss FlatL2 (Euclidean)
-  2. Faiss IVFFlat FlatL2 (Euclidean)
-  3. Faiss IVFFlat FlatL2 + nprobe (Euclidean)
-  4. Faiss FlatIP (Cosine)
-  5. Faiss IVFFlat FlatIP (Cosine)
-  6. Faiss Flat (Manhattan)
+      * Faiss FlatL2 (Euclidean)
+      * Faiss IVFFlat FlatL2 (Euclidean)
+      * Faiss IVFFlat FlatL2 + nprobe (Euclidean)
+      * Faiss FlatIP (Cosine)
+      * Faiss IVFFlat FlatIP (Cosine)
+      * Faiss Flat (Manhattan)
 
 7. Анализ результатов, выбор лучшей модели с лучшим показателем accuracy@5
 8. Тестирование лучшей модели на данных validation.csv, замер accuracy@5
@@ -71,6 +71,6 @@ IVFFlat + nprobe (Euclidean) с регулязациейStandardScaler: 69.395
   
 Получили довольно высокий accuracy@5 - 70.335, что говорит о хорошем качестве модели, ее точности в предсказании похожих товаров (примерно 3-4 товара из 5 предсказываются верно).
 
-## Используемые библиотеки
+## Используемые библиотеки и инструменты
 
 Pandas, NumPy, Matplotlib, Seaborn, Sklearn, Faiss
