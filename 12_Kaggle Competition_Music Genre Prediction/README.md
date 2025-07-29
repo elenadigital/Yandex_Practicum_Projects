@@ -18,22 +18,22 @@ music_genre - Целевой признак. Для каждого трека н
 
 **Описание данных**
 
-instance_id - уникальный идентификатор трека  
-track_name - название трека  
-acousticness - акустичность  
-danceability - танцевальность  
-duration_ms -продолжительность в милисекундах  
-energy - энергичность  
-instrumentalness - инструментальность  
-key - базовый ключ (нота) произведения  
-liveness - привлекательность  
-loudness - громкость  
-mode - указывает на модальность (мажорную или минорную) трека  
-speechiness - выразительность  
-tempo - темп  
-obtained_date - дата загрузки в сервис  
-valence - привлекательность произведения для пользователей сервиса  
-music_genre - музыкальный жанр  
+* instance_id - уникальный идентификатор трека  
+* track_name - название трека  
+* acousticness - акустичность  
+* danceability - танцевальность  
+* duration_ms -продолжительность в милисекундах  
+* energy - энергичность  
+* instrumentalness - инструментальность  
+* key - базовый ключ (нота) произведения  
+* liveness - привлекательность  
+* loudness - громкость  
+* mode - указывает на модальность (мажорную или минорную) трека  
+* speechiness - выразительность  
+* tempo - темп  
+* obtained_date - дата загрузки в сервис  
+* valence - привлекательность произведения для пользователей сервиса  
+* music_genre - музыкальный жанр  
 
 ## План исследования
 
@@ -50,9 +50,9 @@ music_genre - музыкальный жанр
 
 Обучили три модели:
 
-1. LogisticRegression
-2. RandomForestClassifier
-3. CatBoostClassifier
+* LogisticRegression
+* RandomForestClassifier
+* CatBoostClassifier
 
 Лучший результат показала модель CatBoostClassifier с гиперпараметрами: 'catboostclassifier__border_count': 10, 'catboostclassifier__depth': 4, 'catboostclassifier__iterations': 300, 'catboostclassifier__l2_leaf_reg': 9, 'catboostclassifier__learning_rate': 0.1, 'catboostclassifier__random_state': 42, 'catboostclassifier__thread_count': 4, f1 micro Score: 0.45039170320013905
 
