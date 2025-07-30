@@ -7,3 +7,4 @@
 | Название проекта | Описание | Используемые библиотеки | 
 | :---------------------- | :---------------------- | :---------------------- |
 | [Отток клиентов](https://github.com/elenadigital/Yandex_Practicum_Projects/tree/main/01_Bank%20Customer%20Churn%20Prediction) | Прогноз оттока клиентов из банка | Pandas, Matplotlib, Seaborn, Sklearn |
+| [Matching. Поиск наиболее похожих товаров](https://github.com/elenadigital/Yandex_Practicum_Projects/tree/main/02_Product%20Matching) | Разработка алгоритма поиска наиболее похожих товаров на основе векторных признаков с использованием KNN, кластеризации и Faiss | Pandas, NumPy, Matplotlib, Seaborn, Sklearn, Faiss |
